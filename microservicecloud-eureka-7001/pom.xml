@@ -10,6 +10,11 @@
   <artifactId>microservicecloud-eureka-7001</artifactId>
   <name>microservicecloud-eureka-7001</name>
   <dependencies>
+  <!-- 开启security验证 -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
    <!--eureka-server服务端 -->
    <dependency>
      <groupId>org.springframework.cloud</groupId>

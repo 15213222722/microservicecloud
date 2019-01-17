@@ -25,4 +25,11 @@ eureka:
     service-url: 
       #单机 defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       
       #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      defaultZone: http://root:root@eureka7001.com:7001/eureka/,http://root:root@eureka7002.com:7002/eureka/
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: root #用户名和密码，等会访问的时候，会要求你登录，服务注册的时候也需要带着用户名和密码
+    password: root

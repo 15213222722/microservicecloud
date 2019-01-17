@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.hhf.springcloud.common.Dept;
 
-@FeignClient(value = "MICROSERVICECLOUD-DEPT") // 向哪个微服务进行面向接口feign的编码
+@FeignClient(value = "MICROSERVICECLOUD-DEPT",fallbackFactory=DeptClientServiceFallbackFactory.class)// 向哪个微服务进行面向接口feign的编码
 public interface DeptClientService {
 	
 	@RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
